@@ -1,0 +1,15 @@
+# Ignore all node_modules across all folders
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+**/dist/
+
+# Env files
+.env
+.env.local
+
+# Misc
+.DS_Store
+coverage/
