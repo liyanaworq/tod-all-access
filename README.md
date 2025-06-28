@@ -110,9 +110,9 @@ POST   | /bookings                 | Create new booking (protected)
 POST   | /resources                | Create new resource (protected)
 POST   | /outlets                  | Create new outlet (protected) 
 
-Pending development
+## Pending development
 
-System Integration Overview - TOD All Access
+### System Integration Overview - TOD All Access
 
 Entity                      | Description                  | Purpose                                                                     | Status
 ----------------------------|------------------------------|-----------------------------------------------------------------------------|--------
@@ -146,5 +146,7 @@ Each module supports these npm scripts:
 
 ## Initialized By
 Liyana Khairul
-Software Engineer • Full Stack Developer
+<br>
+Software Engineer 
+<br>
 WORQ
