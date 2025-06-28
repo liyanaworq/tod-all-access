@@ -1,4 +1,4 @@
-# TOD All Access - Coworking Space Management System
+# TOD All Access - Coworking Space Management System (For reference only)
 
 A full-stack monorepo solution for modern coworking space management, featuring quota tracking, resource booking, and administrative controls.
 
@@ -23,13 +23,13 @@ A full-stack monorepo solution for modern coworking space management, featuring 
 - State Management: Context API
 
 ## Project Structure
-tod-all-access/
-├── apps/
-│   ├── admin/          # Admin frontend portal
-│   └── customer/       # Customer frontend portal
-├── backend/            # NestJS backend API
-├── package.json        # Root package configuration
-└── README.md           # Project documentation
+- tod-all-access/
+ - apps/
+    - admin/          # Admin frontend portal
+    - customer/       # Customer frontend portal
+ - backend/           # NestJS backend API
+ - package.json       # Root package configuration
+ - README.md          # Project documentation
 
 ## Quick Start
 ### Prerequisites
