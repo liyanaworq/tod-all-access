@@ -55,6 +55,7 @@ A full-stack monorepo solution for modern coworking space management, featuring 
    npm install
 
 3. Create .env file:
+   <br> 
    MONGO_URI=mongodb://localhost:27017/tod
    <br> 
    JWT_SECRET=yourSuperSecretKey
@@ -62,18 +63,22 @@ A full-stack monorepo solution for modern coworking space management, featuring 
    PORT=5000
 
 5. Start development server:
+   <br> 
    npm run start:dev
    <br> 
    API will run at: http://localhost:5000
 
 ### Customer Portal
 1. Navigate to customer app:
+   <br> 
    cd apps/customer
 
-2. Install dependencies:
+3. Install dependencies:
+   <br> 
    npm install
 
-3. Start development server:
+5. Start development server:
+   <br> 
    npm run dev
    Access at: http://localhost:5173
 
