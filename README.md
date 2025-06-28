@@ -56,11 +56,14 @@ A full-stack monorepo solution for modern coworking space management, featuring 
 
 3. Create .env file:
    MONGO_URI=mongodb://localhost:27017/tod
+   <br> 
    JWT_SECRET=yourSuperSecretKey
+   <br> 
    PORT=5000
 
-4. Start development server:
+5. Start development server:
    npm run start:dev
+   <br> 
    API will run at: http://localhost:5000
 
 ### Customer Portal
