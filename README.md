@@ -95,6 +95,15 @@ Customer : https://localhost:5174
    ```
    API will run at: http://localhost:3000
 
+### In case NestJS backend is unable to connect to MongoDB, start MongoDB Locally (via Homebrew on Mac OS); 
+```
+brew services start mongodb-community@6.0
+```
+Then run
+```
+npm run dev
+```
+
 ### Customer Portal
 1. Navigate to customer app: 
    ```
