@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* src/index.css or src/globals.css */
+.nav-link {
+  @apply text-gray-700 hover:text-amber-600 transition duration-200;
+}

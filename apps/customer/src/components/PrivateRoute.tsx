@@ -1,11 +1,17 @@
 import { Navigate } from 'react-router-dom';
-import { useAuth } from '../context/authContext'; // ✅ make sure it's correct path
+import { useAuth } from '../context/authContext';
 import type { JSX } from 'react';
 
 export default function PrivateRoute({ children }: { children: JSX.Element }) {
   const { token, loading } = useAuth();
 
-  if (loading) return <div>Loading...</div>; // ✅ Show loading only once
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen text-gray-500 text-sm">
+        Checking authentication...
+      </div>
+    );
+  }
 
-  return token ? children : <Navigate to="/login" />;
+  return token ? children : <Navigate to="/auth" replace />;
 }
