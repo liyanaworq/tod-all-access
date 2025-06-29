@@ -45,9 +45,18 @@ A full-stack monorepo solution for modern coworking space management, featuring 
    cd tod-all-access
    ```
 
-3. Install root dependencies (optional):
+3. Install root dependencies:
    ```
    npm install
+   ```
+
+
+
+3. Install application dependencies:
+   ### One line command
+   ```
+   cd apps/customer && npm install && cd ../admin && npm install && cd ../../backend && npm install
+   ```
 
 ## Running the Project
 
