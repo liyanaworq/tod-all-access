@@ -12,20 +12,20 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white shadow-md px-6 py-4 flex justify-between items-center">
-      <Link to="/" className="text-lg font-bold text-indigo-600">
+      <Link to="/" className="text-lg font-bold text-amber-600">
         WORQ TOD ALL ACCESSS CUSTOMER PORTAL
       </Link>
 
       <div className="space-x-4">
         {customer ? (
           <>
-            <Link to="/dashboard" className="text-gray-700 hover:text-indigo-600">
+            <Link to="/dashboard" className="text-gray-700 hover:text-amber-600">
               Dashboard
             </Link>
-            <Link to="/bookings" className="text-gray-700 hover:text-indigo-600">
+            <Link to="/bookings" className="text-gray-700 hover:text-amber-600">
               My Bookings
             </Link>
-            <Link to="/profile" className="text-gray-700 hover:text-indigo-600">
+            <Link to="/profile" className="text-gray-700 hover:text-amber-600">
               Profile
             </Link>
             <button
@@ -37,10 +37,10 @@ export default function Navbar() {
           </>
         ) : (
           <>
-            <Link to="/login" className="text-gray-700 hover:text-indigo-600">
+            <Link to="/login" className="text-gray-700 hover:text-amber-600">
               Login
             </Link>
-            <Link to="/register" className="text-gray-700 hover:text-indigo-600">
+            <Link to="/register" className="text-gray-700 hover:text-amber-600">
               Register
             </Link>
           </>

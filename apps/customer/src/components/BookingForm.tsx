@@ -138,7 +138,7 @@ export default function BookingForm() {
 
       <button
         onClick={handleSubmit}
-        className="w-full bg-indigo-600 text-white p-2 rounded hover:bg-indigo-700"
+        className="w-full bg-amber-600 text-white p-2 rounded hover:bg-amber-700"
       >
         Submit Booking
       </button>

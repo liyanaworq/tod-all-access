@@ -39,7 +39,7 @@ export default function Login() {
         onChange={(e) => setForm({ ...form, password: e.target.value })}
       />
       <button
-        className="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700"
+        className="w-full bg-amber-600 text-white py-2 rounded hover:bg-amber-700"
         onClick={handleSubmit}
       >
         Login

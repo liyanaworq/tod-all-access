@@ -43,13 +43,13 @@ export default function Login() {
         />
         <button
           type="submit"
-          className="w-full bg-indigo-600 text-white p-2 rounded hover:bg-indigo-700"
+          className="w-full bg-amber-600 text-white p-2 rounded hover:bg-amber-700"
         >
           Login
         </button>
         <p className="text-sm text-center text-gray-600">
           Forgot your password?{' '}
-          <a href="/forgot-password" className="text-indigo-600 underline">
+          <a href="/forgot-password" className="text-amber-600 underline">
             Reset here
           </a>
         </p>

@@ -88,7 +88,7 @@ export default function CustomersPage() {
         <h1 className="text-2xl font-bold">Customers</h1>
         <button
           onClick={openCreate}
-          className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700"
+          className="bg-amber-600 text-white px-4 py-2 rounded hover:bg-amber-700"
         >
           + Add Customer
         </button>
@@ -172,7 +172,7 @@ export default function CustomersPage() {
                 Cancel
               </button>
               <button
-                className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700"
+                className="bg-amber-600 text-white px-4 py-2 rounded hover:bg-amber-700"
                 onClick={handleSave}
               >
                 {isEditing ? 'Update' : 'Create'}

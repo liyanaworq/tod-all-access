@@ -107,7 +107,7 @@ export default function ResourcesPage() {
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">Resources</h1>
         <button
-          className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700"
+          className="bg-amber-600 text-white px-4 py-2 rounded hover:bg-amber-700"
           onClick={openCreate}
         >
           + Add Resource
@@ -199,7 +199,7 @@ export default function ResourcesPage() {
                 Cancel
               </button>
               <button
-                className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700"
+                className="bg-amber-600 text-white px-4 py-2 rounded hover:bg-amber-700"
                 onClick={handleSave}
               >
                 Save

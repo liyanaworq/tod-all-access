@@ -91,7 +91,7 @@ export default function Bookings() {
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">Bookings</h1>
         <button
-          className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700"
+          className="bg-amber-600 text-white px-4 py-2 rounded hover:bg-amber-700"
           onClick={() => setShowModal(true)}
         >
           + Add Booking
@@ -194,7 +194,7 @@ export default function Bookings() {
                 Cancel
               </button>
               <button
-                className="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700"
+                className="px-4 py-2 bg-amber-600 text-white rounded hover:bg-amber-700"
                 onClick={handleCreate}
               >
                 Create

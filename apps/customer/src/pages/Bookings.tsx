@@ -75,7 +75,7 @@ export default function Booking() {
         onChange={(e) => setForm({ ...form, checkIn: e.target.value })}
       />
       <button
-        className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700"
+        className="bg-amber-600 text-white px-4 py-2 rounded hover:bg-amber-700"
         onClick={handleSubmit}
       >
         Book Now

@@ -49,11 +49,11 @@ export default function Register() {
           onChange={e => setPassword(e.target.value)}
           required
         />
-        <button type="submit" className="w-full bg-indigo-600 text-white p-2 rounded hover:bg-indigo-700">
+        <button type="submit" className="w-full bg-amber-600 text-white p-2 rounded hover:bg-amber-700">
           Register
         </button>
         <p className="text-center text-sm text-gray-600">
-          Already registered? <a href="/login" className="text-indigo-600 underline">Log in</a>
+          Already registered? <a href="/login" className="text-amber-600 underline">Log in</a>
         </p>
       </form>
     </div>

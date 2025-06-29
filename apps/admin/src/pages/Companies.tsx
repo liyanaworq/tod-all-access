@@ -26,7 +26,7 @@ export default function Companies() {
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">Companies</h1>
         <button
-          className="bg-indigo-600 text-white px-4 py-2 rounded"
+          className="bg-amber-600 text-white px-4 py-2 rounded"
           onClick={() => setShowModal(true)}
         >
           + Add Company
@@ -59,7 +59,7 @@ export default function Companies() {
             />
             <div className="flex justify-end gap-2">
               <button onClick={() => setShowModal(false)}>Cancel</button>
-              <button className="bg-indigo-600 text-white px-4 py-2 rounded" onClick={handleCreate}>
+              <button className="bg-amber-600 text-white px-4 py-2 rounded" onClick={handleCreate}>
                 Create
               </button>
             </div>
