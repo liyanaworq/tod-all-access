@@ -40,21 +40,39 @@ A full-stack monorepo solution for modern coworking space management, featuring 
 
 ### Installation
 1. Clone the repository:
+   ```
    git clone https://github.com/your-username/tod-all-access.git
    cd tod-all-access
+   ```
 
-2. Install root dependencies (optional):
+3. Install root dependencies (optional):
+   ```
    npm install
 
 ## Running the Project
+
+### Concurrent application startup
+On root application rood folder (tod-all access) run the following command
+```
+npm run start:all
+```
+These will start all applications
+Backend : https://localhost:3000
+Admin : https://localhost:5173
+Customer : https://localhost:5174 
+
 ### Backend Setup
 1. Navigate to backend:
+   ```
    cd backend
+   ```
 
-2. Install dependencies:
+3. Install dependencies:
+   ```
    npm install
+   ```
 
-3. Create .env file:
+5. Create .env file:
    <br> 
    MONGO_URI=mongodb://localhost:27017/tod
    <br> 
@@ -62,35 +80,43 @@ A full-stack monorepo solution for modern coworking space management, featuring 
    <br> 
    PORT=5000
 
-5. Start development server:
+6. Start development server:
    <br> 
    npm run start:dev
    <br> 
-   API will run at: http://localhost:5000
+   API will run at: http://localhost:3000
 
 ### Customer Portal
 1. Navigate to customer app:
-   <br> 
+   <br>
+   ```
    cd apps/customer
 
 3. Install dependencies:
-   <br> 
+   <br>
+   ```
    npm install
 
 5. Start development server:
-   <br> 
+   <br>
+   ```
    npm run dev
+   ```
    Access at: http://localhost:5173
 
 ### Admin Portal
 1. Navigate to admin app:
+   ```
    cd apps/admin
 
-2. Install dependencies:
+3. Install dependencies:
+   ```
    npm install
 
-3. Start development server:
+5. Start development server:
+   ```
    npm run dev
+   ```
    Access at: http://localhost:5174
 
 ## Authentication Flow
