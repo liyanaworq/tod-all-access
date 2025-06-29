@@ -81,24 +81,23 @@ Customer : https://localhost:5174
    PORT=5000
 
 6. Start development server:
-   <br> 
-   npm run start:dev
-   <br> 
+   ```
+   npm run start:dev 
+   ```
    API will run at: http://localhost:3000
 
 ### Customer Portal
-1. Navigate to customer app:
-   <br>
+1. Navigate to customer app: 
    ```
    cd apps/customer
+   ```
 
-3. Install dependencies:
-   <br>
+3. Install dependencies: 
    ```
    npm install
+   ```
 
-5. Start development server:
-   <br>
+5. Start development server: 
    ```
    npm run dev
    ```
@@ -108,10 +107,12 @@ Customer : https://localhost:5174
 1. Navigate to admin app:
    ```
    cd apps/admin
+   ```
 
 3. Install dependencies:
    ```
    npm install
+   ```
 
 5. Start development server:
    ```
