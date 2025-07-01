@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 import { api } from '../libs/api';
 
 export default function Login() {
@@ -21,38 +21,56 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <form onSubmit={handleLogin} className="bg-white p-6 rounded shadow-md w-96 space-y-4">
-        <h2 className="text-2xl font-semibold text-center">Admin Login</h2>
-        {error && <p className="text-red-500 text-sm text-center">{error}</p>}
-        <input
-          type="email"
-          placeholder="Email"
-          className="w-full border p-2 rounded"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          className="w-full border p-2 rounded"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-amber-50 px-4 py-8">
+      <form
+        onSubmit={handleLogin}
+        className="w-full max-w-md bg-white p-8 rounded-2xl shadow-lg space-y-6 transition-all"
+      >
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-amber-700">Admin Login</h2>
+          <p className="text-sm text-gray-500">Sign in to manage your dashboard</p>
+        </div>
+
+        {error && (
+          <div className="bg-red-100 text-red-600 p-3 rounded text-sm text-center">
+            {error}
+          </div>
+        )}
+
+        <div className="space-y-4">
+          <input
+            type="email"
+            placeholder="Email address"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+
         <button
           type="submit"
-          className="w-full bg-amber-600 text-white p-2 rounded hover:bg-amber-700"
+          className="w-full py-3 bg-amber-600 text-white font-medium rounded-lg hover:bg-amber-700 transition duration-200"
         >
           Login
         </button>
-        <p className="text-sm text-center text-gray-600">
-          Forgot your password?{' '}
-          <a href="/forgot-password" className="text-amber-600 underline">
-            Reset here
+
+        <div className="flex justify-between text-sm text-gray-600">
+          <a href="/forgot-password" className="hover:underline hover:text-amber-700">
+            Forgot password?
           </a>
-        </p>
+          <a href="/register" className="hover:underline hover:text-amber-700">
+            Register now
+          </a>
+        </div>
       </form>
     </div>
   );
