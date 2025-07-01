@@ -8,9 +8,11 @@ import {AuthModule} from './modules/auth.module'
 import {TestController} from './controllers/test.controller'
 import {CustomerModule} from './modules/customer.module'
 import {ResourceModule } from './modules/resources.module'
+import { ConfigModule } from '@nestjs/config';
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost:27017/coworking'),//(process.env.MONGODB_URI as string),
+    ConfigModule.forRoot(),
+    MongooseModule.forRoot(process.env.MONGODB_URI || 'mongodb://localhost:27017/coworking'),
     BookingModule,
     UserModule,
     CompanyModule,
