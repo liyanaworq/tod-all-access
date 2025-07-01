@@ -64,10 +64,10 @@ export default function Booking() {
       >
         <option value="">Select Resource</option>
         {resources
-          .filter((r: any) => r.outletId === form.outletId)
+          .filter((r: any) => r.outletId?._id === form.outletId)
           .map((r: any) => (
             <option key={r._id} value={r._id}>{r.name}</option>
-          ))}
+        ))} 
       </select>
       <input
         type="datetime-local"
