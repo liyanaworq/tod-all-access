@@ -20,7 +20,7 @@ export default function Booking() {
       const [outletsRes, resourcesRes] = await Promise.all([
         api.get('/outlets', { headers }),
         api.get('/resources', { headers }),
-      ]);
+      ]); 
       setOutlets(outletsRes.data);
       setResources(resourcesRes.data);
     };
@@ -28,13 +28,16 @@ export default function Booking() {
   }, []);
 
   const handleSubmit = async () => {
+    console.log("customer",customer)
     const payload = {
       userId: customer._id,
       customerId: customer._id,
       outletId: form.outletId,
       bookingType: 'TOD_PASS',
-      checkIn: form.checkIn,
+      checkIn: form.checkIn, 
+      createdBy:customer._id,
     };
+    console.log("customer",payload)
 
     try {
       await api.post('/bookings', payload, {

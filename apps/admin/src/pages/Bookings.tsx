@@ -100,7 +100,7 @@ export default function Bookings() {
 
       <div className="overflow-x-auto">
         <table className="w-full border text-sm">
-          <thead className="bg-gray-100">
+          <thead className="bg-gray-100 text-left">
             <tr>
               <th className="p-2">Customer</th>
               <th className="p-2">Outlet</th>

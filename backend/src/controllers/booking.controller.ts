@@ -13,19 +13,23 @@ import { BookingService } from '../services/booking.service';
 import { JwtAuthGuard } from '../guards/jwt-auth.guard';
 import { CreateBookingDto } from '../dto/bookings/create-booking.dto';// '../dto/create-booking.dto';
 import { UpdateBookingDto } from '../dto/bookings/update-booking.dto';//'../dto/update-booking.dto';
-
+import { AuthGuard } from '@nestjs/passport';
 @UseGuards(JwtAuthGuard)
 @Controller('bookings')
 export class BookingController {
   constructor(private readonly service: BookingService) {}
 
+@UseGuards(AuthGuard('jwt'))
 @Post()
-create(@Request() req, @Body() dto: CreateBookingDto) { 
+create(@Request() req, @Body() dto: CreateBookingDto) {
+  const createdBy = req.user?.userId || req.body.createdBy;
+
   return this.service.create({
     ...dto,
-    createdBy: req.user.userId,
+    createdBy, // override regardless of what's in dto
   });
 }
+
 
   @Get()
   findAll() {

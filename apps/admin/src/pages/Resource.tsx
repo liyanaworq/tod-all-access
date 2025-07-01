@@ -116,7 +116,7 @@ export default function ResourcesPage() {
 
       <div className="overflow-x-auto border rounded">
         <table className="w-full text-sm text-left">
-          <thead className="bg-gray-100">
+          <thead className="bg-gray-100 text-left">
             <tr>
               <th className="p-3">Name</th>
               <th className="p-3">Type</th>

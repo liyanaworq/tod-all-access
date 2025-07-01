@@ -53,7 +53,7 @@ export default function Dashboard() {
         <p className="text-sm text-gray-500">No bookings yet.</p>
       ) : (
         <table className="w-full text-sm border">
-          <thead className="bg-gray-100">
+          <thead className="bg-gray-100 text-left">
             <tr>
               <th className="p-2">Outlet</th>
               <th className="p-2">Resource</th>

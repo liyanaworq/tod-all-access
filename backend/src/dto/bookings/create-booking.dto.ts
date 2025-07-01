@@ -1,4 +1,4 @@
-import { IsString, IsEnum, IsDateString } from 'class-validator';
+import { IsString, IsEnum, IsDateString, IsOptional } from 'class-validator';
 
 export enum BookingType {
   TOD_PASS = 'TOD_PASS',
@@ -18,11 +18,14 @@ export class CreateBookingDto {
   @IsString()
   customerId: string;
 
+  @IsOptional()
   @IsString()
-  createdBy: string;
+  createdBy?: string;
 
+  @IsOptional()
   @IsDateString()
-  checkIn: string;
+  checkIn?: string;
 
+  @IsOptional()
   checkOut?: Date;
 }
