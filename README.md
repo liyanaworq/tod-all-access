@@ -41,7 +41,7 @@ A full-stack monorepo solution for modern coworking space management, featuring 
 ### Installation
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/tod-all-access.git
+   git clone https://github.com/liyanaworq/tod-all-access.git
    cd tod-all-access
    ```
 
