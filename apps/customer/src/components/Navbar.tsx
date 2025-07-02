@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/authContext';
- 
+
 export default function Navbar() {
   const { logout } = useAuth();
   const navigate = useNavigate();
@@ -11,33 +11,36 @@ export default function Navbar() {
   const handleLogout = () => {
     localStorage.removeItem('customer');
     localStorage.removeItem('customerToken');
-    logout()
-    navigate('/auth'); // ⬅️ consistent with redirect logic
+    logout();
+    navigate('/auth');
   };
+
+  const linkClass = ({ isActive }: { isActive: boolean }) =>
+    `nav-link ${isActive ? 'text-amber-600 font-semibold' : 'text-gray-700 hover:text-amber-600 transition'}`;
 
   return (
     <nav className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link
+          <NavLink
             to="/"
             className="text-xl font-semibold tracking-tight text-amber-600"
           >
             WORQ TOD ALL ACCESS
-          </Link>
+          </NavLink>
 
           <div className="hidden md:flex space-x-6 items-center">
             {customer ? (
               <>
-                <Link to="/dashboard" className="nav-link">
+                <NavLink to="/dashboard" className={linkClass}>
                   Dashboard
-                </Link>
-                <Link to="/bookings" className="nav-link">
+                </NavLink>
+                <NavLink to="/bookings" className={linkClass}>
                   My Bookings
-                </Link>
-                <Link to="/profile" className="nav-link">
+                </NavLink>
+                <NavLink to="/profile" className={linkClass}>
                   Profile
-                </Link>
+                </NavLink>
                 <button
                   onClick={handleLogout}
                   className="text-red-600 hover:underline transition duration-150"
@@ -46,11 +49,9 @@ export default function Navbar() {
                 </button>
               </>
             ) : (
-              <>
-                <Link to="/auth" className="nav-link">
-                  Login/Register
-                </Link> 
-              </>
+              <NavLink to="/auth" className={linkClass}>
+                Login/Register
+              </NavLink>
             )}
           </div>
 
@@ -90,15 +91,15 @@ export default function Navbar() {
         <div className="md:hidden px-4 pb-4 space-y-3">
           {customer ? (
             <>
-              <Link to="/dashboard" className="block nav-link" onClick={() => setIsOpen(false)}>
+              <NavLink to="/dashboard" className={linkClass} onClick={() => setIsOpen(false)}>
                 Dashboard
-              </Link>
-              <Link to="/bookings" className="block nav-link" onClick={() => setIsOpen(false)}>
+              </NavLink>
+              <NavLink to="/bookings" className={linkClass} onClick={() => setIsOpen(false)}>
                 My Bookings
-              </Link>
-              <Link to="/profile" className="block nav-link" onClick={() => setIsOpen(false)}>
+              </NavLink>
+              <NavLink to="/profile" className={linkClass} onClick={() => setIsOpen(false)}>
                 Profile
-              </Link>
+              </NavLink>
               <button
                 onClick={() => {
                   setIsOpen(false);
@@ -111,12 +112,12 @@ export default function Navbar() {
             </>
           ) : (
             <>
-              <Link to="/login" className="block nav-link" onClick={() => setIsOpen(false)}>
+              <NavLink to="/login" className={linkClass} onClick={() => setIsOpen(false)}>
                 Login
-              </Link>
-              <Link to="/register" className="block nav-link" onClick={() => setIsOpen(false)}>
+              </NavLink>
+              <NavLink to="/register" className={linkClass} onClick={() => setIsOpen(false)}>
                 Register
-              </Link>
+              </NavLink>
             </>
           )}
         </div>

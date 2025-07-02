@@ -72,7 +72,7 @@ function AppRoutes() {
           }
         />
         <Route
-          path="/booking"
+          path="/bookings"
           element={
             <PrivateRoute>
               <Booking />
